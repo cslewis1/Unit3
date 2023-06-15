@@ -9,7 +9,7 @@ import javax.persistence.*;
         @GeneratedValue()
         private Integer id;
 
-        @Column(name = "voter_Name")
+        @Column(name = "voter_name")
         private String voterName;
 
         public Integer getId() {

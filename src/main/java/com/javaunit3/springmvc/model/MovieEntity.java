@@ -22,11 +22,19 @@ public class MovieEntity {
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "movie_id")
-    private List<VoteEntity> vote;
+    private List<VoteEntity> votes;
+
+    public List<VoteEntity> getVote() {
+        return votes;
+    }
+
+    public void setVote(List<VoteEntity> vote) {
+        this.votes = vote;
+    }
 
     public void addVote(VoteEntity vote)
     {
-        this.vote.add(vote);
+        this.votes.add(vote);
     }
 
     public Integer getId() {
@@ -61,11 +69,5 @@ public class MovieEntity {
         this.genre = genre;
     }
 
-    public List<VoteEntity> getVote() {
-        return vote;
-    }
 
-    public void setVote(List<VoteEntity> vote) {
-        this.vote = vote;
-    }
 }
